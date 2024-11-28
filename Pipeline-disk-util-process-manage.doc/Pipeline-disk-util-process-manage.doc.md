@@ -109,7 +109,7 @@ sudo systemctl reload postfix || sudo systemctl restart postfix
 #### Step 10: Test the Mail Setup
 - Test by sending a test email:
 ```bash
-echo "This is a test email" | mail -s "Test Subject" whoghostrider@gmail.com
+echo "This is a test email" | mail -s "Test Subject" architpant11@gmail.com
 ```
 
 ### Notes:
