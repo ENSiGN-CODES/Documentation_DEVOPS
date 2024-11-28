@@ -33,7 +33,7 @@
      ```
    - Create an `authorized_keys` file in the `.ssh` directory and paste the public key into it:
      ```sh
-     nano ~/.ssh/authorized_keys
+     vi ~/.ssh/authorized_keys
      ```
 
 4. Copy the private SSH key from the master.
