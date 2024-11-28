@@ -1,28 +1,6 @@
 
 # Configuring a Jenkins Permanent Agent
 
-## **Ensure SSH Service is Running**
-
-1. Check if the SSH service is running:
-   ```sh
-   sudo systemctl status ssh
-   ```
-
-2. If the SSH service is not running, start it:
-   ```sh
-   sudo systemctl start ssh
-   ```
-
-3. If SSH is not installed, execute the following commands:
-   ```sh
-   sudo apt update
-   sudo apt install openssh-server
-   sudo systemctl start ssh
-   sudo systemctl enable ssh  # To start SSH on boot
-   ```
-
----
-
 ## **Creating a Permanent Jenkins Agent**
 
 ### Step-by-Step Configuration
@@ -40,20 +18,15 @@
 
 ## **Setting Up the SSH Key Pair**
 
-1. Log in as the Jenkins user in the terminal (if creating an agent on the same machine):
-   ```sh
-   su - jenkins
-   ```
-
-2. Generate an SSH key pair:
+1. Generate an SSH key pair:
    ```sh
    ssh-keygen
    ```
 
-3. **Standard Path for SSH Keys**: 
+2. **Standard Path for SSH Keys**: 
    By default, keys are stored in `/var/lib/jenkins/.ssh/id_ed25519`.
 
-4. **On the Agent Machine**:
+3. **On the Agent Machine**:
    - Copy the public SSH key from the master and paste it into the new agent’s `.ssh` directory:
      ```sh
      mkdir ~/.ssh
@@ -63,7 +36,7 @@
      nano ~/.ssh/authorized_keys
      ```
 
-5. Copy the private SSH key from the master.
+4. Copy the private SSH key from the master.
 
 ---
 
