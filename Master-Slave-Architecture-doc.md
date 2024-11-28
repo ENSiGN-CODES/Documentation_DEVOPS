@@ -27,7 +27,7 @@
 
 ### Step-by-Step Configuration
 
-1. **Name**: Enter a name for your agent (e.g., `agent1`).
+1. **Name**: Enter a name for your agent (e.g., `slave1`).
 2. **Description**: Add a description for the agent.
 3. **Number of Executors**: Define how many jobs the agent can run in parallel. This typically depends on the server's processing capability.
 4. **Remote Root Directory**:
